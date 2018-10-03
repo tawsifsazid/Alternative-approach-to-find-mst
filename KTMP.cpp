@@ -204,7 +204,7 @@ int main(){
         ///E[0].erase(E[0].begin());
         ///print(0,E[0].size());
         KTMP();
-        cout<<k-final_ans<<endl;
+        cout<<final_ans<<endl;
         //if(!Q[cl_kore_dao].empty()) cout<<"ues"<<endl;
         //else{
         //    cout<<"lel"<<endl;
