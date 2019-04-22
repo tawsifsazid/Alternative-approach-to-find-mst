@@ -96,10 +96,8 @@ void check_merge(int num){
     while(!Q[number].empty()){
         ext = Q[number].top();
         Q[number].pop();
-        if(fixed1 == ext.u && fixed2 == ext.v ){
-
+        if(fixed1 == ext.u && fixed2 == ext.v )
             ///cout<<"thaktese "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
-        }
         else{
             ///cout<<"baad "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
             temp.push_back(ext);
@@ -112,9 +110,8 @@ void check_merge(int num){
         ext = Q[arekjon].top();
         ///cout<<"testing "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
         Q[arekjon].pop();
-        if((fixed2 == ext.u && fixed1 == ext.v) || (fixed1 == ext.u && fixed2 == ext.v) ){
+        if((fixed2 == ext.u && fixed1 == ext.v) || (fixed1 == ext.u && fixed2 == ext.v) )
             ///cout<<"baad "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
-        }
         else{
             ///cout<<"thaktese "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
             temp.push_back(ext);
