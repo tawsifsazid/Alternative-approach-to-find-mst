@@ -96,10 +96,9 @@ void check_merge(int num){
     while(!Q[number].empty()){
         ext = Q[number].top();
         Q[number].pop();
-        if(fixed1 == ext.u && fixed2 == ext.v )
-            ///cout<<"thaktese "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
+        if(fixed1 == ext.u && fixed2 == ext.v ){}
         else{
-            ///cout<<"baad "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
+            ///cout<<"thaktese"<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
             temp.push_back(ext);
         }
     }
@@ -110,8 +109,7 @@ void check_merge(int num){
         ext = Q[arekjon].top();
         ///cout<<"testing "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
         Q[arekjon].pop();
-        if((fixed2 == ext.u && fixed1 == ext.v) || (fixed1 == ext.u && fixed2 == ext.v) )
-            ///cout<<"baad "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
+        if((fixed2 == ext.u && fixed1 == ext.v) || (fixed1 == ext.u && fixed2 == ext.v) ){}
         else{
             ///cout<<"thaktese "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
             temp.push_back(ext);
@@ -159,11 +157,11 @@ void KTMP(){
 int main(){
     clock_t tStart = clock();
     /* Do your stuff here */
-    printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
+    ///printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
 ///    return 0;
 
     freopen("input.txt","r",stdin);
-    ///freopen("output.txt","w",stdout);
+    freopen("output.txt","w",stdout);
 
     int i,j,k,a,b,cst,ch = 0;
 
@@ -193,15 +191,13 @@ int main(){
                 print_queue(i);
          ///   build_minheap(i,E[i].size());
             ///print(i,E[i].size());
-
-
         }
 */
         ///cout<<"input done"<<endl;
         ///E[0].erase(E[0].begin());
         ///print(0,E[0].size());
         KTMP();
-        cout<<final_ans<<endl;
+        cout<<k-final_ans<<endl;
         //if(!Q[cl_kore_dao].empty()) cout<<"ues"<<endl;
         //else{
         //    cout<<"lel"<<endl;
@@ -209,6 +205,6 @@ int main(){
 
         ///if(ch == 1)break;
     }
-    printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
+    ///printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
     return 0;
 }
