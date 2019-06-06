@@ -115,8 +115,7 @@ void check_merge(int num){
             temp.push_back(ext);
         }
     }
-    ///cout<<"merge hoilo "<<number<<" "<<arekjon<<endl;
-    ///parent[arekjon] = number;
+    
      if(number != arekjon){
             final_ans = final_ans + lel;
             edge_nisi++;
@@ -185,25 +184,10 @@ int main(){
             Q[b].push(lol);
             ///E[b].push_back(lol);
         }
-        ///cout<<"s"<<endl;
-/*
-        for(i=0;i<n;i++){
-                print_queue(i);
-         ///   build_minheap(i,E[i].size());
-            ///print(i,E[i].size());
-        }
-*/
-        ///cout<<"input done"<<endl;
-        ///E[0].erase(E[0].begin());
-        ///print(0,E[0].size());
+
         KTMP();
         cout<<final_ans<<endl;
-        //if(!Q[cl_kore_dao].empty()) cout<<"ues"<<endl;
-        //else{
-        //    cout<<"lel"<<endl;
-        //}
-
-        ///if(ch == 1)break;
+       
     }
     ///printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
     return 0;
