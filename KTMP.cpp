@@ -23,10 +23,7 @@ template<typename T, typename U> inline void amax(T &x, U y) { if(x < y) x = y; 
 
 using namespace std;
 
-///dir array for Queen int dxq[10] = {-1,-1,-1,1,1,1,0,0};
-///dir array for Queen int dyq[10] = {-1,0,1,-1,0,1,-1,1};
-///dir array for knight int dxk[10] = {-2,-2,-1,-1,1,1,2,2};
-///dir array for knight int dyk[10] = {1,-1,-2,2,-2,2,-1,1};
+
 
 int n,parent[300005],edge_nisi = 0,final_ans = 0,m,cl_kore_dao;
 
@@ -37,7 +34,7 @@ struct node {
         return cost > a.cost;
     }
 };
-///vector<node>E[200005];
+
 priority_queue< node , vector < node > > Q[400005];
 vector<node>temp;
 
@@ -56,7 +53,7 @@ void init(){
         }
     }
 
-    ///memset(res,0,sizeof res);
+
     temp.clear();
 }
 
@@ -81,7 +78,7 @@ void check_merge(int num){
     ///print_queue(number);
 
     int number = fnd(num);
-    ///cout<<"ashole "<<number<<" but asche "<<num<<endl;
+   
     node ext = Q[number].top();
 
     int fixed1,fixed2,lel;
@@ -89,8 +86,6 @@ void check_merge(int num){
     fixed2 = ext.v;
     lel = ext.cost;
     ///cout<<fixed1<<" "<<fixed2<<" "<<lel<<endl;
-    ///res[fixed1][fixed2] = 1;
-    ///res[fixed2][fixed1] = 1;
 
 
     while(!Q[number].empty()){
@@ -104,7 +99,7 @@ void check_merge(int num){
     }
     int arekjon = fnd(fixed2);
     ///cout<<" 2nd node "<<arekjon<<endl;
-    ///print_queue(arekjon);
+
     while(!Q[arekjon].empty()){
         ext = Q[arekjon].top();
         ///cout<<"testing "<<ext.u<<" "<<ext.v<<" "<<ext.cost<<endl;
@@ -128,10 +123,6 @@ void check_merge(int num){
     cl_kore_dao = number;
     temp.clear();
 
-
-
-   // int p1 = fnd();
-    //int p2 = fnd();
 }
 
 void KTMP(){
@@ -141,24 +132,15 @@ void KTMP(){
        /// cout<<"new turn"<<endl;
         for(i = 0;i<n; i++){
             if(edge_nisi == n-1)break;
-
-                ///cout<<i<<" "<<k_parent<<endl;
-                ///Q[k_parent].pop();
-                ///cout<<"check a jachhe "<<take.u<<" "<<take.v<<" "<<take.cost<<endl;
                 check_merge(i);
-                ///cl_kore_dao = fnd(i);
-                ///break;
         }
-        ///break;
+ 
     }
 }
 
 int main(){
     clock_t tStart = clock();
-    /* Do your stuff here */
-    ///printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
-///    return 0;
-
+   
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
 
